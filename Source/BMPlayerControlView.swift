@@ -234,7 +234,7 @@ open class BMPlayerControlView: UIView {
         let alpha: CGFloat = isShow ? 1.0 : 0.0
         self.isMaskShowing = isShow
         
-        UIApplication.shared.setStatusBarHidden(!isShow, with: .fade)
+        UIApplication.shared.setStatusBarHidden(false, with: .fade)
         
         UIView.animate(withDuration: 0.3, animations: {
             self.topMaskView.alpha    = alpha
