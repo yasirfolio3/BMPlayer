@@ -98,7 +98,7 @@ open class BMPlayerControlView: UIView {
     /* fullScreen button
      fullScreenButton.isSelected = player.isFullscreen
      */
-    open var fullscreenButton = UIButton(type: UIButtonType.custom)
+//     open var fullscreenButton = UIButton(type: UIButtonType.custom)
     
     open var subtitleLabel    = UILabel()
     open var subtitleBackView = UIView()
@@ -265,7 +265,7 @@ open class BMPlayerControlView: UIView {
      */
     open func updateUI(_ isForFullScreen: Bool) {
         isFullscreen = isForFullScreen
-        fullscreenButton.isSelected = isForFullScreen
+//         fullscreenButton.isSelected = isForFullScreen
         chooseDefinitionView.isHidden = !BMPlayerConf.enableChooseDefinition || !isForFullScreen
         if isForFullScreen {
             if BMPlayerConf.topBarShowInCase.rawValue == 2 {
@@ -532,7 +532,7 @@ open class BMPlayerControlView: UIView {
         bottomWrapperView.addSubview(totalTimeLabel)
         bottomWrapperView.addSubview(progressView)
         bottomWrapperView.addSubview(timeSlider)
-        bottomWrapperView.addSubview(fullscreenButton)
+//         bottomWrapperView.addSubview(fullscreenButton)
         
         playButton.tag = BMPlayerControlView.ButtonType.play.rawValue
         playButton.setImage(BMImageResourcePath("Pod_Asset_BMPlayer_play"),  for: .normal)
@@ -570,10 +570,10 @@ open class BMPlayerControlView: UIView {
         progressView.tintColor      = UIColor ( red: 1.0, green: 1.0, blue: 1.0, alpha: 0.6 )
         progressView.trackTintColor = UIColor ( red: 1.0, green: 1.0, blue: 1.0, alpha: 0.3 )
         
-        fullscreenButton.tag = BMPlayerControlView.ButtonType.fullscreen.rawValue
-        fullscreenButton.setImage(BMImageResourcePath("Pod_Asset_BMPlayer_fullscreen"),    for: .normal)
-        fullscreenButton.setImage(BMImageResourcePath("Pod_Asset_BMPlayer_portialscreen"), for: .selected)
-        fullscreenButton.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
+//         fullscreenButton.tag = BMPlayerControlView.ButtonType.fullscreen.rawValue
+//         fullscreenButton.setImage(BMImageResourcePath("Pod_Asset_BMPlayer_fullscreen"),    for: .normal)
+//         fullscreenButton.setImage(BMImageResourcePath("Pod_Asset_BMPlayer_portialscreen"), for: .selected)
+//         fullscreenButton.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
         
         mainMaskView.addSubview(loadingIndicator)
         
