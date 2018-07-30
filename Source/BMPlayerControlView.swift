@@ -701,13 +701,13 @@ open class BMPlayerControlView: UIView {
             make.width.equalTo(40)
         }
         
-        fullscreenButton.snp.makeConstraints { (make) in
-            make.width.equalTo(50)
-            make.height.equalTo(50)
-            make.centerY.equalTo(currentTimeLabel)
-            make.left.equalTo(totalTimeLabel.snp.right)
-            make.right.equalToSuperview()
-        }
+//         fullscreenButton.snp.makeConstraints { (make) in
+//             make.width.equalTo(50)
+//             make.height.equalTo(50)
+//             make.centerY.equalTo(currentTimeLabel)
+//             make.left.equalTo(totalTimeLabel.snp.right)
+//             make.right.equalToSuperview()
+//         }
         
         loadingIndicator.snp.makeConstraints { (make) in
             make.center.equalTo(mainMaskView)
